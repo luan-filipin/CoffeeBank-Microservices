@@ -1,0 +1,3 @@
+account-service/src/main/resources/application.properties
+customer-service/src/main/resources/application.properties
+gateway-service/src/main/resources/application.properties
