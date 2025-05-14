@@ -4,9 +4,11 @@ import java.time.LocalDate;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
+@AllArgsConstructor //Gerado automaticamente pelo Lombok para criar um construtor com todos os parâmetros.
+@NoArgsConstructor //Gerado automaticamente pelo Lombok para criar um construtor sem parâmetros.
 public class CustomerDto {
 	
 	//Atributos.
@@ -14,6 +16,5 @@ public class CustomerDto {
     private String email;
     private String document;
     private LocalDate birthDate;  
-    private LocalDate creationDate;
 
 }

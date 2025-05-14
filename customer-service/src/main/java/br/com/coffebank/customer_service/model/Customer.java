@@ -1,6 +1,7 @@
 package br.com.coffebank.customer_service.model;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -17,5 +18,5 @@ public class Customer {
     private String email;
     private String document;
     private LocalDate birthDate;  
-    private LocalDate creationDate;
+    private LocalDateTime creationDate;
 }

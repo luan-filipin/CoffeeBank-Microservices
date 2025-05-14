@@ -1,0 +1,27 @@
+server:
+  port: 8080
+
+spring:
+  main:
+    web-application-type: reactive # Define o tipo de aplicação como reativa
+  application:
+    name: gateway-service
+
+  cloud:
+    gateway:
+      routes:
+        - id: customer-service
+          uri: http://localhost:8081 # URL do serviço de destino
+          predicates:
+            - Path=/api/customer/register # Rota que o gateway interceptará
+          filters:
+            - RewritePath=/api/customer/register, /register # Reescreve o caminho, se necessário
+
+  logging:
+    level:
+      org.springframework.security: DEBUG
+
+  endpoints:
+    web:
+      exposure:
+        include: "*"
