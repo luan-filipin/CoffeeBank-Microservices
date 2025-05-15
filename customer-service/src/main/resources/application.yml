@@ -7,3 +7,6 @@ spring:
   data:
     mongodb:
       uri: mongodb+srv://springboot:6JgIdztKlRmdXeiX@cluster0.qyopd9b.mongodb.net/coffeebank_customer?retryWrites=true&w=majority
+  logging:
+    level:
+    org.springframework.web.bind: DEBUG
