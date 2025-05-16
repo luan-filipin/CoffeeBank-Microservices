@@ -17,9 +17,6 @@ spring:
           filters:
             - RewritePath=/api/customer/register, /register # Reescreve o caminho, se necessário
 
-  logging:
-    level:
-      org.springframework.security: DEBUG
 
   endpoints:
     web:
