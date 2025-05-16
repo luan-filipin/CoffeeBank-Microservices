@@ -4,3 +4,4 @@ gateway-service/src/main/resources/application.properties
 gateway-service/target/classes/application.properties
 gateway-service/src/main/resources/application.yml
 customer-service/src/main/resources/application.yml
+account-service/src/main/resources/application.yml
