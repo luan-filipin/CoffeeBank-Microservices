@@ -1,5 +1,10 @@
 package br.com.coffebank.account_service.service;
 
-public interface AccountService {
+import br.com.coffebank.account_service.dto.AccountDto;
 
+public interface AccountService {
+	
+	//Método para criar uma nova conta.
+	AccountDto createAccount(String customerId);
+	
 }
