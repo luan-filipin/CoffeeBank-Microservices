@@ -31,10 +31,10 @@ public class CustomerControllerTest {
 		CustomerDto savedCustomer = new CustomerDto("John Doe", "john.doe@example.com", "12345678952", java.time.LocalDate.of(1990, 1, 1));
 		
 		//Configura o comportamento do Mockito.
-		when(customerService.saveCustomer(curstomerDto)).thenReturn(savedCustomer);
+		//when(customerService.saveCustomer(curstomerDto)).thenReturn(savedCustomer);
 		
 		//Chama o método controller.
-		ResponseEntity<CustomerDto> response = customerController.CreateCustomer(curstomerDto);
+		ResponseEntity<CustomerDto> response = customerController.createCustomer(curstomerDto);
 		
 		//Verifica se o status HTTP e o corpo da resposta.
 		assertEquals(201, response.getStatusCode().value());

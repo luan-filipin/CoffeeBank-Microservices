@@ -9,7 +9,7 @@ import br.com.coffebank.customer_service.model.Customer;
 public interface CustomerMapper {
 	
 	//Mapeamento de Customer para CustomerDto.
-	CustomerDto toDto(Customer customer);
+	CustomerDto toDto(Customer savedCustomer);
 	
 	//Mapeamento de CustomerDto para Customer.
 	Customer toEntity(CustomerDto customerDto);

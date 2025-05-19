@@ -1,9 +1,10 @@
 package br.com.coffebank.customer_service.service;
 
 import br.com.coffebank.customer_service.dto.CustomerDto;
+import br.com.coffebank.customer_service.model.Customer;
 
 public interface CustomerService {
 	
-	CustomerDto saveCustomer(CustomerDto customerDto); //Método para salvar o cliente.
+	Customer saveCustomer(CustomerDto customerDto); //Método para salvar o cliente.
 
 }

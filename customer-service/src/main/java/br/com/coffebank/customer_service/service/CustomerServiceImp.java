@@ -23,19 +23,15 @@ public class CustomerServiceImp implements CustomerService {
 		this.customerRepository = customerRepository;
 	}
 
-	public CustomerDto saveCustomer(CustomerDto customerDto) {
-		// Verifica se o documento já existe no banco de dados.
-		if (customerRepository.existsByDocument(customerDto.getDocument())) {
-			throw new DocumentAlreadyExistsException(customerDto.getDocument());
-		}
-		// Converte o CustomerDto para Customer.
-		Customer customer = customerMapper.toEntity(customerDto);
-		// Cria a data de criação do cliente.
-		customer.setCreationDate(LocalDateTime.now());
-		// Salva o Customer no banco de dados.
-		Customer savedCustomer = customerRepository.save(customer);
-		// Retorna os dados do CustomerDto salvo.
-		return customerMapper.toDto(savedCustomer);
+	@Override
+	public Customer saveCustomer(CustomerDto customerDto) {
+	    if (customerRepository.existsByDocument(customerDto.getDocument())) {
+	        throw new DocumentAlreadyExistsException(customerDto.getDocument());
+	    }
+
+	    Customer customer = customerMapper.toEntity(customerDto);
+	    customer.setCreationDate(LocalDateTime.now());
+	    return customerRepository.save(customer); // Retorna a entidade salva
 	}
 
 }
